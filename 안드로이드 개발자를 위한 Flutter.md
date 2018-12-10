@@ -19,18 +19,17 @@ title: Android 개발자들을 위한 Flutter
 ### Flutter에서 `View` 와 동등한 것은 무엇인가요? 
 
 {{site.alert.secondary}}
-How is react-style, or _declarative_, programming different than the
-traditional imperative style?
-For a comparison, see [Introduction to declarative
+반응형 스타일이나 _선언적_ 프로그래밍은 전통적인 명령형 스타일과 어떻게 다릅니까?
+비교를 위해, 여기를 참조하세요. [Introduction to declarative
 UI](/docs/get-started/flutter-for/declarative).
 {{site.alert.end}}
 
-In Android, the `View` is the foundation of everything that shows up on the
-screen. Buttons, toolbars, and inputs, everything is a View.
-In Flutter, the rough equivalent to a `View` is a `Widget`.
-Widgets don't map exactly to Android views, but while you're getting
-acquainted with how Flutter works you can think of them as
-"the way you declare and construct UI".
+Android 에서, 'View'는 화면에 나타나는 모든 것의 기초입니다. Buttons, toolbars, 
+and inputs, 모든 것은 View입니다.
+Flutter 에서는, Android에서의 'View'와 비슷한 것은  'Widget' 입니다.
+Widgets은 Android의 Views와 정확하게 일치하지는 않지만, Flutter가 어떻게 동작하는지
+익숙해지는 동안에 "당신이 UI 만들고 선언하는 방법"으로 생각 할 수 있습니다.
+
 
 However, these have a few differences to a `View`. To start, widgets have a
 different lifespan: they are immutable and only exist until they need to be
