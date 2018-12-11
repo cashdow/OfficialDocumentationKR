@@ -30,14 +30,16 @@ Flutter 에서는, Android에서의 'View'와 비슷한 것은  'Widget' 입니�
 Widgets은 Android의 Views와 정확하게 일치하지는 않지만, Flutter가 어떻게 동작하는지
 익숙해지는 동안에 "당신이 UI 만들고 선언하는 방법"으로 생각 할 수 있습니다.
 
+그러나, Flutter의 Widget 들은 'View'와 몇가지 차이점이 있습니다. 시작하려면 위젯들은 
+다른 수명을 가져야 합니다. 위젯들은 불변하고 오직 위젯이 바뀌는것이 필요할 때 까지만 존재합니다. 
+이것은 위젯들이나 위젯들의 상태가 변할때 마다, Flutter의 프레임워크는 새로운 위젯 인스턴스 트리를 만든다는 것입니다.
+Android view 와 비교하면 Android는 한번 그려진 이후 'invalidate'가 불릴때까지 
+다시 그려지지 않습니다. 
 
-However, these have a few differences to a `View`. To start, widgets have a
-different lifespan: they are immutable and only exist until they need to be
-changed. Whenever widgets or their state change, Flutter’s framework creates
-a new tree of widget instances. In comparison, an Android view is drawn once
-and does not redraw until `invalidate` is called.
-
-Flutter’s widgets are lightweight, in part due to their immutability.
+Flutter의 위젯들은 가볍고, 부분적으로는 불변합니다.
+왜냐면 위젯들은 그자신이 views 가 아닙니다. 그리고 위젯들은 직접적으로 아무것도 그리지 않고,
+오히려 위젯은 UI 설명이고, 비밀리에 있는 실제 객체들의 "inflated"한 그 자체의 의미입니다.
+(주: 잘 번역이 않되서 원문을 보시는 것도 필요할 것으로 생각됩니다.)
 Because they aren't views themselves, and aren't directly drawing anything,
 but rather are a description of the UI and its semantics that get "inflated"
 into actual view objects under the hood.
